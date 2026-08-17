@@ -1,2 +1,2 @@
-# github-mcp-proxy1
+# github-mcp-proxy
 Proxy for GitHub MCP
