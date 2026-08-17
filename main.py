@@ -6,7 +6,7 @@ from starlette.background import BackgroundTask
 
 app = FastAPI()
 
-GITHUB_MCP_URL = "https://api.githubcopilot.com/mcp/"
+GITHUB_MCP_URL = "https://api.githubcopilot.com/mcp/x/all"
 GITHUB_PAT = os.environ["GITHUB_PAT"]          # your fine-grained PAT
 PROXY_SECRET = os.environ["PROXY_SECRET"]      # random string, acts as the "auth" for this proxy
 
