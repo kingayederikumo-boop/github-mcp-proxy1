@@ -13,4 +13,4 @@ jobs:
         # --max-time 75 gives it enough room to actually finish waking the
         # service up (Render cold start is ~30-60s) instead of timing out
         # right as it comes online.
-        run: curl -fsS --max-time 75 https://YOUR-RENDER-APP.onrender.com/ || true
+        run: curl -fsS --max-time 75 https://github-mcp-proxy-32la.onrender.com/ || true
