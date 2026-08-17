@@ -1,0 +1,16 @@
+name: Keep Render service awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping health endpoint
+        # --max-time 75 gives it enough room to actually finish waking the
+        # service up (Render cold start is ~30-60s) instead of timing out
+        # right as it comes online.
+        run: curl -fsS --max-time 75 https://YOUR-RENDER-APP.onrender.com/ || true
